@@ -23,6 +23,10 @@ struct CustomColorPicker: View {
                         }
                 }
             }
+            .padding()
+            .background(.thinMaterial)
+            .cornerRadius(35)
+            .padding(.horizontal)
         }
     }
 }
