@@ -18,6 +18,8 @@ struct CustomColorPicker: View {
                     Rectangle()
                         .foregroundColor(color)
                         .frame(width: 45, height: 45)
+                        .opacity(color == selectedColor ? 0.5 : 1.0)
+                        .scaleEffect(color == selectedColor ? 1.1 : 1.0)
                         .onTapGesture {
                             selectedColor = color
                         }
