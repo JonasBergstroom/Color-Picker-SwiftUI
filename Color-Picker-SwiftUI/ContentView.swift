@@ -13,6 +13,13 @@ struct ContentView: View {
     var body: some View {
         VStack {
             CustomColorPicker(selectedColor: $selectedColor)
+            Spacer()
+            Rectangle()
+                .frame(width: 320, height: 320)
+                .foregroundColor(selectedColor)
+            Text("\(selectedColor.description)")
+                .font(.system(size: 45))
+            Spacer()
         }
     }
 }
