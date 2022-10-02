@@ -12,7 +12,18 @@ struct CustomColorPicker: View {
     private let colors: [Color] = [.white, .black, .mint, .green, .indigo, .blue, .purple, .orange, .yellow, .red]
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView(.horizontal) {
+            HStack {
+                ForEach(colors, id: \.self) { color in
+                    Rectangle()
+                        .foregroundColor(color)
+                        .frame(width: 45, height: 45)
+                        .onTapGesture {
+                            selectedColor = color
+                        }
+                }
+            }
+        }
     }
 }
 
